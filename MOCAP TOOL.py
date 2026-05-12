@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import maya.cmds as cmds
 import math
 import os
@@ -208,7 +209,7 @@ def set_first_last_to_average():
         print("动画过短，无法使用倒数第三帧进行混合")
         return
 
-    print(f"正在同步：第{fStart}帧 ↔ 第{fEnd}帧 → 平均值（参考倒数第3帧）")
+    print(f"正在同步：第{fStart}帧 --- 第{fEnd}帧 - 平均值（参考倒数第3帧）")
     for jnt in all_joints:
         cmds.currentTime(fStart)
         t1_x = cmds.getAttr(f"{jnt}.translateX")
